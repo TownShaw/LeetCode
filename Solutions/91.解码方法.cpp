@@ -19,22 +19,6 @@ public:
         {
             numofDecode.push_back(0);
         }
-/*        int Edge = s.size() - 1;
-        if (s[Edge] != '0')
-        {
-            numofDecode[Edge] = 1;
-        }
-        else
-        {
-            if (s[Edge - 1] != '1' && s[Edge - 1] != '2')
-            {
-                return 0;
-            }
-            else
-            {
-                numofDecode[Edge - 1] = 1;
-            }
-        }*/
         int Kind_Num = Decode(s, 0);
         return Kind_Num;
     }
