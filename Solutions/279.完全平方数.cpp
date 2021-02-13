@@ -13,24 +13,17 @@ class Solution {
 public:
     int numSquares(int n)
     {
-        std::vector<int> DP(n + 1, 0);
+        std::vector<int> DP(n + 1, -1);
+        DP[0] = 0;
+        DP[1] = 1;
         return MinSquare(n, DP);
     }
 
     int MinSquare(int n, std::vector<int> &DP)  //返回数字 n 的 Min_num_Square
     {
-        if (DP[n] != 0)
+        if (DP[n] != -1)
         {
             return DP[n];
-        }
-        if (n == 0)
-        {
-            return 0;
-        }
-        else if (n == 1)
-        {
-            DP[n] = 1;
-            return 1;
         }
         int less_Num = int(sqrt(n));    //平方小于 n 的最大整数, less_Num
         int Min = 10000;
